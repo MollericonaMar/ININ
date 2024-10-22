@@ -1,0 +1,248 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Oxygen", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #ffffff;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply py-2 border-y-2 border-black;
+  }
+  .navbar ul {
+    @apply flex flex-wrap justify-center;
+  }
+
+  .navbar li {
+    @apply m-3 md:mx-8 transition-all;
+  }
+
+  .navbar li:hover {
+    @apply scale-110 text-gray-700;
+  }
+
+  .form {
+    @apply mt-5 flex flex-col items-center justify-center;
+  }
+
+  .form h2 {
+    @apply text-lg mb-2;
+  }
+
+  .form input[type="email"],
+  .form input[type="password"] {
+    @apply w-64 md:w-[80%] h-8 p-2 mb-3 mt-2 border-2 border-gray-500 rounded-md;
+  }
+
+  .form input[type="submit"],
+  .register-user input[type="submit"],
+  .boton {
+    @apply bg-black text-white w-32 md:w-28 lg:w-32 px-5 md:px-2 lg:px-5 py-2 transition-all cursor-pointer mb-8;
+  }
+
+  .state input[type="submit"] {
+    @apply bg-black text-white w-52 md:w-48 lg:w-52 px-5 md:px-2 lg:px-5 py-2 transition-all cursor-pointer mb-8;
+  }
+
+  .order input[type="submit"] {
+    @apply bg-black text-white w-52 px-5 md:px-2 lg:px-5 py-2 transition-all cursor-pointer mb-8;
+  }
+
+  .boton2 {
+    @apply bg-gray-300 text-black w-20 md:w-[4.25rem] lg:w-24 px-2 md:px-1 lg:px-5 py-2 transition-all cursor-pointer mb-8;
+  }
+
+  .boton2:hover {
+    @apply bg-gray-400 scale-105;
+  }
+
+  .form input[type="submit"]:hover,
+  .register-user input[type="submit"]:hover,
+  .state input[type="submit"]:hover,
+  .order input[type="submit"]:hover,
+  .boton:hover {
+    @apply bg-gray-900 scale-105;
+  }
+
+  .form label {
+    @apply text-center;
+  }
+
+  .actions {
+    @apply mb-8 w-full flex flex-col items-center md:items-start md:pl-10 md:list-disc;
+  }
+
+  .actions li {
+    @apply mb-3 md:mb-2 pb-1 border-b-2 border-black transition-all;
+  }
+
+  .actions li:hover {
+    @apply scale-105 text-gray-700 border-gray-700;
+  }
+
+  .product {
+    @apply mb-5 flex flex-col items-center w-full text-center;
+  }
+
+  .product h2 {
+    @apply font-bold;
+  }
+
+  .product p {
+    @apply text-sm mb-3;
+  }
+
+  .product div {
+    @apply w-48 h-48 lg:w-64 lg:h-64 relative;
+  }
+
+  .product img {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .product-show {
+    @apply flex flex-col md:px-8 lg:px-16 items-center;
+  }
+
+  .product-show div:first-child {
+    @apply md:w-72 md:h-72 w-96 h-96 relative;
+  }
+
+  .product-show img {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+
+  .product-show div:nth-child(2) {
+    @apply flex flex-col items-center;
+  }
+
+  .product-show span {
+    @apply font-bold;
+  }
+
+  .register-user,
+  .state,
+  .order {
+    @apply w-full flex flex-col items-center;
+  }
+
+  .register-user h1,
+  .order h1 {
+    @apply text-2xl mb-5 mt-8;
+  }
+
+  .register-user form,
+  .state form,
+  .order form {
+    @apply flex flex-col items-center;
+  }
+
+  .register-user input[type="text"],
+  .order input[type="text"],
+  .register-user input[type="password"],
+  .register-user input[type="number"],
+  .register-user input[type="email"] {
+    @apply w-64 h-8 p-2 mb-3 mt-2 border-2 border-gray-500 rounded-md;
+  }
+
+  .register-user textarea {
+    @apply w-64 h-32 p-2 mb-3 mt-2 border-2 border-gray-500 rounded-md;
+  }
+
+  .register-user #labelImage {
+    @apply border-b-2 border-black cursor-pointer pb-2 text-lg mt-5;
+  }
+
+  .register-user select,
+  .state select {
+    @apply w-64 h-8 p-1 mb-3 mt-2 border-2 border-gray-500 rounded-md;
+  }
+
+  .error {
+    @apply flex flex-col items-center w-full mt-16;
+  }
+
+  .error p {
+    @apply mt-16 text-3xl;
+  }
+
+  .error span {
+    @apply mt-5 text-xl;
+  }
+
+  .alerta {
+    @apply max-w-[16rem] w-full rounded px-2 py-1 mt-1 mb-3 text-center;
+  }
+
+  .alerta-exito {
+    @apply bg-green-300 text-green-600;
+  }
+
+  .alerta-error {
+    @apply bg-red-300 text-red-600;
+  }
+
+  .tabla {
+    @apply w-full flex flex-col mt-5 items-center;
+  }
+
+  .tabla h1 {
+    @apply text-xl font-medium text-center mb-5;
+  }
+
+  .tabla table {
+    @apply mb-5 md:max-w-[30rem] lg:max-w-2xl w-full divide-y divide-gray-200;
+  }
+
+  .tabla th {
+    @apply px-6 py-3 bg-gray-200 text-sm text-left leading-4 font-medium text-black uppercase tracking-wider;
+  }
+
+  .tabla tbody {
+    @apply bg-white divide-y divide-gray-300;
+  }
+
+  .tabla td {
+    @apply px-6 py-4;
+  }
+
+  .tabla .botones {
+    @apply flex flex-col md:flex-row w-full items-center md:justify-center;
+  }
+
+  .titulo {
+    @apply flex justify-center px-5 w-full mb-5;
+  }
+
+  .titulo h1 {
+    @apply text-2xl py-5 border-b-2 border-gray-500 w-full text-center;
+  }
+
+  .boton-cart {
+    @apply border-black border-2 p-2 cursor-pointer transition-all;
+  }
+
+  .boton-cart:hover {
+    @apply bg-black text-white;
+  }
+}

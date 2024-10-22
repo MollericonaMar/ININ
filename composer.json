@@ -1,0 +1,27 @@
+{
+  "name": "drifterdev/tienda-linea",
+  "description": "Proyecto de tienda en línea",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Config\\": "config/",
+      "Controllers\\": "controllers/",
+      "Models\\": "models/",
+      "Helpers\\": "helpers/",
+      "Views\\": "views/",
+      "Search\\":"search/"
+      
+    }
+  },
+  "authors": [
+    {
+      "name": "Mateo Álvarez",
+      "email": "maalvarezmu@unal.edu.co"
+    }
+  ],
+  "require": {
+    "phpmailer/phpmailer": "^6.9",
+    "google/apiclient": "^2.17"
+  }
+}
